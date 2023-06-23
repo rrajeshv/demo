@@ -1,0 +1,27 @@
+tell me about your self
+
+I've total 8 years of experince in IT and 4 years into devops and cloud AWS and exclusivly on AWS.
+
+Currently working in EPIQ systems and supporting for ecomerse project.
+
+Technologies worked on current project are
+
+Github as VCS (Version control systems)
+Jenkis for CI CD
+Ansible code configuration manager
+Terraform Iaac
+Docker for containerisation and docker hub for storing images
+Kubernetes --> for deploy application into production.
+
+
+Linux
+
+techstack used for this project is Java.
+
+
+
+In aws I worked on EC2, on storage( EBS, EFS, S3, Glacier, Aws backup) on Network related like VPC subnet, security groups IG,NAT Gateway, vpc peering, Elastic IP,DHCP, Interface end point, Direct connect 
+
+
+S3 Load balancer and IAM
+

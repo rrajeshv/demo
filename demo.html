@@ -1,0 +1,78 @@
+
+
+<Jenkins>
+why we use master and slave architecture
+
+In your enivronment you have mutilple devlopment teams on daily basies they will do code changes and commits due to the new commits it will triggers the CI process.if we have 100's of CI process running by this Jenkins will be overloaded and also some teams might have different requierments some projects need java 7 and some 8. some need python 2 and some need python 3
+
+to avoid all the issue we go for master and slave architecture.
+
+1. Master will work as a scheduler.
+2. slave/ worker node will process for CI.
+
+you can also update which team should which node and which application need to go for which worker node.
+
+
+</Jenkins>
+what is the difference between wget and curl
+Both used for downloading the packages from internet but curl is used to check proper network connetion is established or not.
+
+
+
+
+
+<Bash script>
+#!/bin/bash
+
+# Variables
+APP_DIR="/path/to/application"
+DEPLOYMENT_DIR="/var/www/html"
+BACKUP_DIR="/path/to/backup"
+TIMESTAMP=$(date +%Y%m%d%H%M%S)
+
+# Step 1: Backup the current deployment
+echo "Backing up current deployment..."
+mkdir -p "$BACKUP_DIR"
+tar -czf "$BACKUP_DIR/deployment_$TIMESTAMP.tar.gz" -C "$DEPLOYMENT_DIR" .
+
+# Step 2: Update the application code
+echo "Updating application code..."
+cd "$APP_DIR"
+git pull origin master
+
+# Step 3: Build and package the application
+echo "Building and packaging the application..."
+mvn clean package
+
+# Step 4: Stop the application server
+echo "Stopping the application server..."
+systemctl stop your_application_service
+
+# Step 5: Deploy the updated code
+echo "Deploying the updated code..."
+rm -rf "$DEPLOYMENT_DIR/*"
+cp -r "$APP_DIR/target/*" "$DEPLOYMENT_DIR/"
+
+# Step 6: Start the application server
+echo "Starting the application server..."
+systemctl start your_application_service
+
+echo "Deployment complete!"
+</Bash script>
+
+
+<groovy>
+
+
+pipeline{
+agent any
+stages{
+stage(build){
+step{
+maveen clean
+}
+}
+}
+}
+
+</groovy>
